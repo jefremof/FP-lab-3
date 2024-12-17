@@ -30,5 +30,6 @@
   ppx_sexp_conv
   ppx_inline_test
   ppx_jane
-  sexplib)
+  sexplib
+  iter)
  )
