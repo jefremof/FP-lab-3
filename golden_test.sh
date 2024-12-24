@@ -7,6 +7,6 @@ fi
 
 FILENAME=$1
 
-cat "test/$FILENAME" | dune exec fp_lab_3 -- -step=1.0 Linear Lagrange > "test/output/result_$FILENAME"
+cat "test/$FILENAME" | opam exec -- dune exec fp_lab_3 -- -step=1.0 Linear Lagrange > "test/output/result_$FILENAME"
 
 diff "test/golden_$FILENAME" "test/output/result_$FILENAME"
