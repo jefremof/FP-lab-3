@@ -31,5 +31,6 @@
   ppx_inline_test
   ppx_jane
   sexplib
-  iter)
+  (iter (= 1.6))
+  )
  )

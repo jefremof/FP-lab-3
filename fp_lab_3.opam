@@ -17,6 +17,7 @@ depends: [
   "ppx_inline_test"
   "ppx_jane"
   "sexplib"
+  "iter" {= "1.6"}
   "odoc" {with-doc}
 ]
 build: [
