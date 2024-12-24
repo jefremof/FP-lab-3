@@ -1,7 +1,6 @@
 open Fp_lab_3.Runners
 open Fp_lab_3.Presets
 open Fp_lab_3.Input
-open Fp_lab_3.Utils
 
 let usage_msg = "append <step> <method1> [<method2>]"
 let step_arg = ref 1.0
@@ -33,7 +32,4 @@ let () =
   in
   let techniques = Core.List.filter_map !technique_arg ~f in
   let step = !step_arg in
-  Printf.printf "Methods:\n";
-  List.iter (fun t -> Printf.printf "%s\n\n" t.name) techniques;
-  Printf.printf "Step: %f\n\n" step;
   execute step techniques
