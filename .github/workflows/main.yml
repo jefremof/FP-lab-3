@@ -37,6 +37,7 @@ jobs:
       - run: opam exec -- dune build -j3
       - run: cat ./test/example | opam exec -- dune exec fp_lab_3 -- -step=1.0 Linear Lagrange
       - run: chmod +x golden_test.sh
+      - run: mkdir test/output
       - run: ./golden_test.sh example
 
   lint-doc:
