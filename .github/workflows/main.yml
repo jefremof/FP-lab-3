@@ -36,6 +36,8 @@ jobs:
       - run: eval $(opam env)
       - run: opam exec -- dune build -j3
       - run: opam exec -- cat example.txt | dune exec fp_lab_3 -- -step=1.0 Linear Lagrange
+      - run: chmod +x golden_test.sh
+      - run: ./golden_test.sh example
 
   lint-doc:
     runs-on: ubuntu-latest
