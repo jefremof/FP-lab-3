@@ -17,7 +17,7 @@ let print technique_name points () =
 
 let gen_series ((a, _) : point) ((b, _) : point) step =
   let rec aux current acc =
-    if current > b then List.rev (current :: acc)
+    if current >= b then List.rev (current :: acc)
     else aux (current +. step) (current :: acc)
   in
   aux a []
