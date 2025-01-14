@@ -1,0 +1,8 @@
+(library
+ (name tests)
+ (libraries fp_lab_3 iter)
+ (modules runner)
+ (inline_tests
+  (deps examples/diagonal examples/repository))
+ (preprocess
+  (pps ppx_deriving.show ppx_expect ppx_inline_test)))
